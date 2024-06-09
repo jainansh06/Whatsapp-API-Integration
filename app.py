@@ -12,7 +12,7 @@ with open('config.json') as f:
 
 app.config.update(config)
 
-# Database setup
+
 DATABASE_URL = "sqlite:///phone_numbers.db"
 engine = create_engine(DATABASE_URL)
 Base.metadata.bind = engine
@@ -29,7 +29,7 @@ def send_message_route():
     default_message = "This is a default message"
     data = get_text_message_input(phone_number, default_message)
     
-    # Save the phone number to the database
+    
     if not session.query(PhoneNumber).filter_by(phone_number=phone_number).first():
         new_phone_number = PhoneNumber(phone_number=phone_number)
         session.add(new_phone_number)
@@ -48,7 +48,7 @@ def webhook():
     default_response = "Thank you"
     data = get_text_message_input(phone_number, default_response)
     
-    # Save the phone number to the database
+  
     if not session.query(PhoneNumber).filter_by(phone_number=phone_number).first():
         new_phone_number = PhoneNumber(phone_number=phone_number)
         session.add(new_phone_number)
