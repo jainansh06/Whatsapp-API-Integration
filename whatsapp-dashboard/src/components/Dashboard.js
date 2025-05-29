@@ -371,7 +371,7 @@ useEffect(() => {
       const chatDate = new Date(chat.timestamp);
       const now = new Date();
       
-      // Custom date range filter
+      
       if (dateFilter === 'custom' && (dateRange.start || dateRange.end)) {
         const startDate = dateRange.start ? new Date(dateRange.start) : new Date('1900-01-01');
         const endDate = dateRange.end ? new Date(dateRange.end) : new Date();
@@ -401,7 +401,7 @@ useEffect(() => {
   });
 }, [chats, search, dateFilter, dateRange, sortBy, sortOrder]);
 
-// Paginated data
+
 const paginatedChats = useMemo(() => {
   const startIndex = (currentPage - 1) * itemsPerPage;
   return filteredAndSortedChats.slice(startIndex, startIndex + itemsPerPage);
@@ -447,7 +447,7 @@ const totalPages = Math.ceil(filteredAndSortedChats.length / itemsPerPage);
     });
   }, [chats]);
   
-  // Reset pagination when filters change
+  
 useEffect(() => {
   setCurrentPage(1);
 }, [search, dateFilter, dateRange, sortBy, sortOrder]);
@@ -527,7 +527,7 @@ const handleRefresh = async () => {
 
   return (
     <div style={styles.container}>
-      {/* Header */}
+      
       <div style={styles.header}>
         <div>
           <h1 style={styles.title}>📊 WhatsApp Chat Dashboard</h1>
@@ -543,7 +543,7 @@ const handleRefresh = async () => {
         </div>
       </div>
 
-      {/* Stats Cards */}
+      
       <div style={styles.statsGrid}>
         <div style={{ ...styles.statCard, ...styles.statCardBlue }}>
           <div style={styles.statContent}>
@@ -586,7 +586,7 @@ const handleRefresh = async () => {
         </div>
       </div>
 
-      {/* Charts */}
+      
       <div style={styles.chartsGrid}>
         <div style={styles.card}>
           <div style={styles.cardHeader}>
@@ -633,7 +633,7 @@ const handleRefresh = async () => {
         </div>
       </div>
 
-      {/* Filters and Search */}
+      
       <div style={{ ...styles.card, ...styles.filtersCard }}>
         <div style={styles.cardContent}>
           <div style={styles.filtersContent}>
@@ -705,7 +705,7 @@ const handleRefresh = async () => {
         </div>
       </div>
 
-      {/* Chat List */}
+      
       <div>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '16px' }}>
           <h2 style={{ fontSize: '20px', fontWeight: '600', color: '#111827', margin: 0 }}>
@@ -763,7 +763,7 @@ const handleRefresh = async () => {
         </div>
       </div>
 
-{/* Pagination */}
+
       {totalPages > 1 && (
         <div style={styles.pagination}>
           <button
