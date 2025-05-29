@@ -1,0 +1,42 @@
+[
+  {
+    "id": "c001",
+    "reason": "Hospitalization due to accident",
+    "process": "Submit FIR, hospital bills, and discharge summary within 7 days.",
+    "documents": ["FIR", "Hospital Bill", "Discharge Summary"],
+    "category": "Accident",
+    "turnaround": "5-7 working days"
+  },
+  {
+    "id": "c002",
+    "reason": "Maternity-related treatment",
+    "process": "Pre-authorization required. Submit maternity discharge documents and prescriptions.",
+    "documents": ["Pre-auth form", "Discharge Papers", "Doctor Prescription"],
+    "category": "Maternity",
+    "turnaround": "7-10 working days"
+  },
+  {
+    "id": "c003",
+    "reason": "Critical illness surgery (e.g., heart bypass)",
+    "process": "Submit diagnosis report, specialist certificate, and hospital bill.",
+    "documents": ["Diagnosis Report", "Specialist Certificate", "Hospital Bill"],
+    "category": "Critical Illness",
+    "turnaround": "10-15 working days"
+  },
+  {
+    "id": "c004",
+    "reason": "COVID-19 hospitalization",
+    "process": "Upload RT-PCR report, hospital admission, and bills to the claim portal.",
+    "documents": ["RT-PCR Report", "Hospital Admission Note", "Final Bill"],
+    "category": "COVID-19",
+    "turnaround": "3-5 working days"
+  },
+  {
+    "id": "c005",
+    "reason": "Daycare procedure like cataract",
+    "process": "Submit doctor recommendation, bill, and pre-approval from insurer.",
+    "documents": ["Doctor Recommendation", "Pre-approval Letter", "Bill"],
+    "category": "Daycare",
+    "turnaround": "5-7 working days"
+  }
+]

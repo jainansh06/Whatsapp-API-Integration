@@ -1,0 +1,47 @@
+[
+  {
+    "id": "h001",
+    "name": "Apollo Hospital",
+    "city": "Chennai",
+    "specialities": ["Cardiology", "Neurology", "Orthopedics"],
+    "isNetwork": true,
+    "emergencyAvailable": true,
+    "rating": 4.5
+  },
+  {
+    "id": "h002",
+    "name": "Fortis Healthcare",
+    "city": "Bangalore",
+    "specialities": ["Cancer", "Cardiology", "Urology"],
+    "isNetwork": true,
+    "emergencyAvailable": false,
+    "rating": 4.2
+  },
+  {
+    "id": "h003",
+    "name": "AIIMS",
+    "city": "Delhi",
+    "specialities": ["General", "Pediatrics", "Trauma"],
+    "isNetwork": false,
+    "emergencyAvailable": true,
+    "rating": 4.8
+  },
+  {
+    "id": "h004",
+    "name": "Manipal Hospital",
+    "city": "Hyderabad",
+    "specialities": ["Orthopedics", "Gastroenterology"],
+    "isNetwork": true,
+    "emergencyAvailable": true,
+    "rating": 4.3
+  },
+  {
+    "id": "h005",
+    "name": "Narayana Health",
+    "city": "Kolkata",
+    "specialities": ["Cardiology", "Nephrology"],
+    "isNetwork": true,
+    "emergencyAvailable": false,
+    "rating": 4.1
+  }
+]

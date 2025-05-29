@@ -1,0 +1,47 @@
+[
+  {
+    "id": "p001",
+    "name": "Health Secure Basic",
+    "description": "Covers hospitalization up to ₹5L, free annual health checkups.",
+    "coverage": "₹5,00,000",
+    "premium": "₹4,999/year",
+    "category": "Basic",
+    "ageGroup": "18-60"
+  },
+  {
+    "id": "p002",
+    "name": "Health Secure Plus",
+    "description": "Higher coverage with maternity benefits and critical illness.",
+    "coverage": "₹10,00,000",
+    "premium": "₹7,499/year",
+    "category": "Premium",
+    "ageGroup": "18-65"
+  },
+  {
+    "id": "p003",
+    "name": "Family Floater Plan",
+    "description": "Covers all family members under a single premium.",
+    "coverage": "₹15,00,000",
+    "premium": "₹12,999/year",
+    "category": "Family",
+    "ageGroup": "18-65"
+  },
+  {
+    "id": "p004",
+    "name": "Senior Citizen Care",
+    "description": "Special plan for individuals aged 60 and above with domiciliary care.",
+    "coverage": "₹7,00,000",
+    "premium": "₹10,999/year",
+    "category": "Senior",
+    "ageGroup": "60+"
+  },
+  {
+    "id": "p005",
+    "name": "Critical Illness Shield",
+    "description": "Provides lump-sum coverage for major illnesses like cancer or heart surgery.",
+    "coverage": "₹20,00,000",
+    "premium": "₹6,999/year",
+    "category": "Critical Illness",
+    "ageGroup": "25-60"
+  }
+]

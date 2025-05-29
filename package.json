@@ -1,0 +1,26 @@
+{
+  "name": "whatsapp-api-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.52.0",
+    "@google/generative-ai": "^0.24.1",
+    "axios": "^1.9.0",
+    "cloudinary": "^2.6.1",
+    "cohere-ai": "^7.17.1",
+    "crypto": "^1.0.1",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "fuse.js": "^7.1.0",
+    "mongodb": "4.1",
+    "mongoose": "^8.15.1",
+    "openai": "^4.103.0"
+  }
+}
