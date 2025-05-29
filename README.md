@@ -1,4 +1,4 @@
-⚠️ This is a mock version created using dummy data. The actual project is under NDA as part of an internship.
+⚠️ This is a mock version created using dummy data. The actual project is under NDA as part of my internship at Niva Bupa Ltd.
 
 ## 📌 About the Project
 A full-stack project simulating a real-world WhatsApp Bot for insurance customer support — featuring category-wise smart replies, fuzzy search, and a modern React dashboard for monitoring.
