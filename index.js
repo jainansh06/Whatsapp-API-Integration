@@ -12,20 +12,20 @@ const path = require('path');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Initialize Cohere and OpenAI
+
 const cohere = new CohereClient({ token: process.env.COHERE_API_KEY });
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 
-// Load insurance domain data
+
 const policies = JSON.parse(fs.readFileSync(path.join(__dirname, 'data', 'policies.json')));
 const hospitals = JSON.parse(fs.readFileSync(path.join(__dirname, 'data', 'hospitals.json')));
 const claims = JSON.parse(fs.readFileSync(path.join(__dirname, 'data', 'claims.json')));
 
-// Fuzzy Search Setup
+
 const fusePolicyCategories = new Fuse(policies, { keys: ['category'], threshold: 0.3 });
 const fuseClaimCategories = new Fuse(claims, { keys: ['category'], threshold: 0.3 });
 
-// MongoDB setup
+
 mongoose.connect(process.env.MONGODB_URI)
   .then(() => console.log('✅ MongoDB connected'))
   .catch(err => console.error('❌ MongoDB connection error:', err));
@@ -39,10 +39,10 @@ const chatSchema = new mongoose.Schema({
 });
 const Chat = mongoose.model('Chat', chatSchema);
 
-// Middleware
+
 app.use(bodyParser.json());
 
-// Webhook verification
+
 app.get('/webhook', (req, res) => {
   const VERIFY_TOKEN = process.env.VERIFY_TOKEN;
   const mode = req.query['hub.mode'];
@@ -58,7 +58,7 @@ app.get('/webhook', (req, res) => {
   }
 });
 
-// Webhook message receiver
+
 app.post('/webhook', async (req, res) => {
   try {
     const entry = req.body.entry?.[0];
@@ -104,7 +104,7 @@ app.post('/webhook', async (req, res) => {
   }
 });
 
-// API to get all chats (dashboard)
+
 app.get('/api/chats', async (req, res) => {
   try {
     const chats = await Chat.find().sort({ timestamp: -1 });
@@ -114,7 +114,7 @@ app.get('/api/chats', async (req, res) => {
   }
 });
 
-// Smart reply fallback logic
+
 async function getSmartReplyWithFallback(prompt) {
   try {
     const response = await cohere.generate({
@@ -147,7 +147,7 @@ async function getSmartReplyWithFallback(prompt) {
   }
 
   try {
-    // TODO: Implement Gemini API call
+    
     throw new Error('Gemini API not implemented');
   } catch (error) {
     console.error('❌ Gemini error:', error.message);
@@ -156,7 +156,7 @@ async function getSmartReplyWithFallback(prompt) {
   return { reply: "Sorry, I couldn't generate a response right now.", modelUsed: 'none' };
 }
 
-// Send WhatsApp message
+
 async function sendWhatsAppMessage(recipientPhone, text) {
   try {
     await axios.post(
@@ -179,7 +179,7 @@ async function sendWhatsAppMessage(recipientPhone, text) {
   }
 }
 
-// Start server
+
 app.listen(PORT, () => {
   console.log(`🚀 Server running on port ${PORT}`);
 });
